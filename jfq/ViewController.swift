@@ -11,17 +11,11 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBAction func leftwindow(sender: AnyObject) {
-        var loop=0;
-        var x:Double=0.0;
-        var y:Double=0.0;
-        var pointLoop=false;
+        
     }
 
     @IBAction func rightwindow(sender: AnyObject) {
-        var loop=0;
-        var x:Double=0.0;
-        var y:Double=0.0;
-        var pointLoop=false;
+
     }
     
     @IBOutlet weak var leftteam: UILabel!
