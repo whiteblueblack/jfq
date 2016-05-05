@@ -9,35 +9,114 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
-    @IBAction func leftwindow(sender: AnyObject) {
-        
-    }
 
-    @IBAction func rightwindow(sender: AnyObject) {
-
-    }
-    
-    @IBOutlet weak var leftteam: UILabel!
-    @IBOutlet weak var rightteam: UILabel!
+    @IBOutlet weak var defen: UILabel!
+    var x:Double=0.0;
+    var y:Double=0.0;
     
 
-    @IBAction func leftadd(sender: AnyObject) {
-        
+    @IBOutlet weak var defen2: UILabel!
+    var x1:Double=0.0;
+    var y2:Double=0.0;
+    @IBAction func jiayifen1(sender: UIButton) {
+        var a:Int32=0
+        var b:Int32=0
+        var c:Int32=0
+        if(!yifen1.text!.isEmpty){
+            a=(yifen1.text! as NSString).intValue
+        }
+        if(!defen.text!.isEmpty){
+            b=(defen.text! as NSString).intValue
+        }
+        c=a+b
+        defen.text="\(c)"
+    }
+    @IBAction func jialiangfen1(sender: UIButton) {
+        var a:Int32=0
+        var b:Int32=0
+        var c:Int32=0
+        if(!liangfen1.text!.isEmpty){
+            a=(liangfen1.text! as NSString).intValue
+        }
+        if(!defen.text!.isEmpty){
+            b=(defen.text! as NSString).intValue
+        }
+        c=a+b
+        defen.text="\(c)"
+    }
+    @IBAction func jiasanfen1(sender: UIButton) {
+        var a:Int32=0
+        var b:Int32=0
+        var c:Int32=0
+        if(!sanfen1.text!.isEmpty){
+            a=(sanfen1.text! as NSString).intValue
+        }
+        if(!defen.text!.isEmpty){
+            b=(defen.text! as NSString).intValue
+        }
+        c=a+b
+        defen.text="\(c)"
+    }
+    @IBAction func jiayifen2(sender: UIButton) {
+        var d:Int32=0
+        var e:Int32=0
+        var f:Int32=0
+        if(!yifen2.text!.isEmpty){
+            d=(yifen2.text! as NSString).intValue
+        }
+        if(!defen2.text!.isEmpty){
+            e=(defen2.text! as NSString).intValue
+        }
+        f=d+e
+        defen2.text="\(f)"
+    }
+    @IBAction func jialiangfen2(sender: UIButton) {
+        var d:Int32=0
+        var e:Int32=0
+        var f:Int32=0
+        if(!liangfen2.text!.isEmpty){
+            d=(liangfen2.text! as NSString).intValue
+        }
+        if(!defen2.text!.isEmpty){
+            e=(defen2.text! as NSString).intValue
+        }
+        f=d+e
+        defen2.text="\(f)"
     }
     
-    @IBAction func rightadd(sender: AnyObject) {
+    @IBAction func jiasanfen2(sender: UIButton) {
+        var d:Int32=0
+        var e:Int32=0
+        var f:Int32=0
+        if(!sanfen2.text!.isEmpty){
+            d=(sanfen2.text! as NSString).intValue
+        }
+        if(!defen2.text!.isEmpty){
+            e=(defen2.text! as NSString).intValue
+        }
+        f=d+e
+        defen2.text="\(f)"
     }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    @IBAction func qingchu(sender: UIButton) {
+        defen.text!="0";
+        x=0.0;
+        y=0.0;
+        defen2.text!="0";
+        x1=0.0;
+        y2=0.0;
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    @IBOutlet weak var yifen1: UILabel!
 
 
+    @IBOutlet weak var liangfen1: UILabel!
+    @IBOutlet weak var sanfen1: UILabel!
+
+    @IBOutlet weak var yifen2: UILabel!
+    @IBOutlet weak var liangfen2: UILabel!
+    @IBOutlet weak var sanfen2: UILabel!
+
+    
+    
 }
+
 
