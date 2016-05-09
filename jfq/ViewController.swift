@@ -57,6 +57,7 @@ class ViewController: UIViewController {
         c=a+b
         defen.text="\(c)"
     }
+     //
     @IBAction func jiayifen2(sender: UIButton) {
         var d:Int32=0
         var e:Int32=0
