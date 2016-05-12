@@ -14,6 +14,11 @@
 		1B8F8E8D1CC8709900CD9CC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B8F8E8B1CC8709900CD9CC0 /* LaunchScreen.storyboard */; };
 		1B8F8E981CC8709900CD9CC0 /* jfqTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8F8E971CC8709900CD9CC0 /* jfqTests.swift */; };
 		1B8F8EA31CC8709900CD9CC0 /* jfqUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8F8EA21CC8709900CD9CC0 /* jfqUITests.swift */; };
+		1B9A56EC1CE428FF0099E8A2 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B9A56EB1CE428FF0099E8A2 /* libsqlite3.0.tbd */; };
+		1B9A56F11CE429560099E8A2 /* SQLiteDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9A56EE1CE429560099E8A2 /* SQLiteDB.swift */; };
+		1B9A56F21CE429560099E8A2 /* SQLTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9A56EF1CE429560099E8A2 /* SQLTable.swift */; };
+		1B9A56F31CE429560099E8A2 /* String-Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9A56F01CE429560099E8A2 /* String-Extras.swift */; };
+		1B9A56F51CE4297B0099E8A2 /* data.db in Resources */ = {isa = PBXBuildFile; fileRef = 1B9A56F41CE4297B0099E8A2 /* data.db */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,12 @@
 		1B8F8E9E1CC8709900CD9CC0 /* jfqUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jfqUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B8F8EA21CC8709900CD9CC0 /* jfqUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jfqUITests.swift; sourceTree = "<group>"; };
 		1B8F8EA41CC8709900CD9CC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B9A56EB1CE428FF0099E8A2 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		1B9A56EE1CE429560099E8A2 /* SQLiteDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SQLiteDB.swift; path = SQLiteDB/SQLiteDB.swift; sourceTree = "<group>"; };
+		1B9A56EF1CE429560099E8A2 /* SQLTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SQLTable.swift; path = SQLiteDB/SQLTable.swift; sourceTree = "<group>"; };
+		1B9A56F01CE429560099E8A2 /* String-Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String-Extras.swift"; path = "SQLiteDB/String-Extras.swift"; sourceTree = "<group>"; };
+		1B9A56F41CE4297B0099E8A2 /* data.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data.db; sourceTree = "<group>"; };
+		1B9A56F61CE429910099E8A2 /* jfq-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "jfq-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B9A56EC1CE428FF0099E8A2 /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +89,9 @@
 		1B8F8E761CC8709900CD9CC0 = {
 			isa = PBXGroup;
 			children = (
+				1B9A56EB1CE428FF0099E8A2 /* libsqlite3.0.tbd */,
+				1B9A56F41CE4297B0099E8A2 /* data.db */,
+				1B9A56ED1CE4292A0099E8A2 /* SQLiteDB */,
 				1B8F8E811CC8709900CD9CC0 /* jfq */,
 				1B8F8E961CC8709900CD9CC0 /* jfqTests */,
 				1B8F8EA11CC8709900CD9CC0 /* jfqUITests */,
@@ -103,6 +118,7 @@
 				1B8F8E891CC8709900CD9CC0 /* Assets.xcassets */,
 				1B8F8E8B1CC8709900CD9CC0 /* LaunchScreen.storyboard */,
 				1B8F8E8E1CC8709900CD9CC0 /* Info.plist */,
+				1B9A56F61CE429910099E8A2 /* jfq-Bridging-Header.h */,
 			);
 			path = jfq;
 			sourceTree = "<group>";
@@ -123,6 +139,16 @@
 				1B8F8EA41CC8709900CD9CC0 /* Info.plist */,
 			);
 			path = jfqUITests;
+			sourceTree = "<group>";
+		};
+		1B9A56ED1CE4292A0099E8A2 /* SQLiteDB */ = {
+			isa = PBXGroup;
+			children = (
+				1B9A56EE1CE429560099E8A2 /* SQLiteDB.swift */,
+				1B9A56EF1CE429560099E8A2 /* SQLTable.swift */,
+				1B9A56F01CE429560099E8A2 /* String-Extras.swift */,
+			);
+			name = SQLiteDB;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +213,7 @@
 		1B8F8E771CC8709900CD9CC0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = ZH13;
 				TargetAttributes = {
@@ -229,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B8F8E8D1CC8709900CD9CC0 /* LaunchScreen.storyboard in Resources */,
+				1B9A56F51CE4297B0099E8A2 /* data.db in Resources */,
 				1B8F8E8A1CC8709900CD9CC0 /* Assets.xcassets in Resources */,
 				1B8F8E881CC8709900CD9CC0 /* Main.storyboard in Resources */,
 			);
@@ -255,6 +283,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B9A56F31CE429560099E8A2 /* String-Extras.swift in Sources */,
+				1B9A56F11CE429560099E8A2 /* SQLiteDB.swift in Sources */,
+				1B9A56F21CE429560099E8A2 /* SQLTable.swift in Sources */,
 				1B8F8E851CC8709900CD9CC0 /* ViewController.swift in Sources */,
 				1B8F8E831CC8709900CD9CC0 /* AppDelegate.swift in Sources */,
 			);
@@ -398,10 +429,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = jfq/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ZH.com.cn.jfq;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "jfq/jfq-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -409,10 +443,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = jfq/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ZH.com.cn.jfq;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "jfq/jfq-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -483,6 +519,7 @@
 				1B8F8EA91CC8709900CD9CC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1B8F8EAA1CC8709900CD9CC0 /* Build configuration list for PBXNativeTarget "jfqTests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +528,7 @@
 				1B8F8EAC1CC8709900CD9CC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1B8F8EAD1CC8709900CD9CC0 /* Build configuration list for PBXNativeTarget "jfqUITests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +537,7 @@
 				1B8F8EAF1CC8709900CD9CC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
